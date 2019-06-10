@@ -1,4 +1,4 @@
 # webpack-study
 webpack-study
 
-[自定义 loader 练习](./tree/html-minify-loader)
+[参考 webpack.BannerPlugin](https://github.com/webpack/webpack/blob/master/lib/BannerPlugin.js)
