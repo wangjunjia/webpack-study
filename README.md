@@ -8,3 +8,5 @@ webpack-study
 
 
 [自定义 plugin 练习](https://github.com/wangjunjia/webpack-study/tree/html-template-plugin)
+
+[clean console plugin 练习](https://github.com/wangjunjia/webpack-study/tree/clean-console-webpack-plugin)
