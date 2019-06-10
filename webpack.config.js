@@ -1,5 +1,5 @@
 const path = require('path')
-const BannerPlugin = require('./plugin/banner-plugin')
+const CleanConsolePlugin = require('./plugin/clean-console-plugin')
 
 module.exports = {
   mode: 'development',
@@ -9,8 +9,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new BannerPlugin({
-      banner: `Hello Plugin`
+    new CleanConsolePlugin({
+      // ignore: ['group', 'groupEnd', 'info']
     })
   ]
 }
