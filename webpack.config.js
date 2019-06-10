@@ -1,33 +1,40 @@
 const path = require('path')
-const HtmlWebapckPlugin = require('html-webpack-plugin')
-const HotModuleReplacementPlugin = require('webpack').HotModuleReplacementPlugin
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000,
-    hot: true,
-  },
   mode: 'development',
-  entry: path.join(__dirname, './src/app.js'),
+  entry: path.resolve(__dirname, './src/app.xyz'),
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   module: {
     rules: [
       {
-        test: /\.html$/,
-        use: [ 'html-loader', 'html-minify-loader']
+        test: /\.xyz$/,
+        use: [
+          {
+            loader: 'abc2js-loader',
+            options: {
+              key: '_abc_',
+              value: 'var'
+            }
+          },
+          {
+            loader: 'xyz2abc-loader',
+            options: {
+              key: '__xyz__',
+              value: '_abc_'
+            }
+          },
+        ]
       }
     ]
   },
   resolveLoader: {
-    modules: [path.join(__dirname, './loader'), 'node_modules']
+    modules: [path.resolve(__dirname, './loader'), 'node_modules']
   },
   plugins: [
-    new HtmlWebapckPlugin(),
-    new HotModuleReplacementPlugin()
+    new CleanWebpackPlugin()
   ]
 }

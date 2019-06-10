@@ -1,0 +1,3 @@
+__xyz__ description = 'webpack-study_custom-loader'
+
+console.log(description)
