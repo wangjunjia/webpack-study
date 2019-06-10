@@ -1,7 +1,7 @@
 {
-  "name": "custom-loader-study",
+  "name": "custom-loader-demo",
   "version": "1.0.0",
-  "description": "webpack-study, custom-loader-study",
+  "description": "webpack-study, custom-loader-demo",
   "private": true,
   "scripts": {
     "build": "webpack"
