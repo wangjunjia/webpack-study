@@ -1,4 +1,6 @@
 # webpack-study
 webpack-study
 
-[参考 webpack.BannerPlugin](https://github.com/webpack/webpack/blob/master/lib/BannerPlugin.js)
+clean-console-plugin
+
+移除 console 的正则表达式 有问题，不要使用！！！
