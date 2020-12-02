@@ -1,0 +1,19 @@
+{
+  "name": "mini-webpack",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "node lib/bundler.js | js-beautify | highlight",
+    "debug": "node --inspect lib/bundler.js",
+    "bundle": "node mini-webpack.config.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-traverse": "^6.26.0",
+    "babylon": "^6.18.0",
+    "cli-highlight": "^2.1.8",
+    "js-beautify": "^1.13.0"
+  }
+}
